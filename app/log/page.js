@@ -1,7 +1,23 @@
-export default function Log(){
+import MenuLinks from "../(components)/MenuLinks";
+
+async function getUnpaid(){
+    const unpaid = await fetch("http://localhost:3000/api/unpaid")
+    return unpaid.json()
+}
+
+export default async function Log(){
+
+    const unpaid = await getUnpaid()
+
+    let menuLinksObjArray = [{name: "<------", url: "/"}, {name: " ", url: "/"}]
+
+    for(let elem in unpaid) menuLinksObjArray.push({name: "", url: ""})
+
+
     return(
             <div>
-                <h1> d</h1>
+                <MenuLinks objArray={menuLinksObjArray}/>
+                <h1>very advanced table</h1>
             </div>
     )
 }

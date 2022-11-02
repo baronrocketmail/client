@@ -16,7 +16,7 @@ export default async function PaymentURL({params}){
         if (unpaid[i].url != params.paymentURL) {
             menuLinksObjArray.push({name: " ", url: "/"})
         } else if (unpaid[i].url === params.paymentURL) {
-            menuLinksObjArray.push({name: unpaid[i].name + ": $" + unpaid[i].amount, url: "" });
+            menuLinksObjArray.push({name: unpaid[i].name + ": $" + unpaid[i].amount, url: "/" });
             break;
         }
     }
