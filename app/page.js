@@ -23,19 +23,19 @@ export default async function Page(){
     const applicationsOpen = await getApplicationsOpen()
     const unpaid = await getUnpaid()
 
-    let MenuLinksObjArray = [{name: name, url: "/"}]
+    let menuLinksObjArray = [{name: name, url: "/"}]
 
     if (applicationsOpen) {
-        MenuLinksObjArray.push({name: "apply now", url:"/log"})
-        MenuLinksObjArray.push({name: "view lease", url:"/viewlease"})
-        MenuLinksObjArray.push({name: "..." ,url: "/explainer"})
+        menuLinksObjArray.push({name: "apply now", url:"/log"})
+        menuLinksObjArray.push({name: "view lease", url:"/viewlease"})
+        menuLinksObjArray.push({name: "..." ,url: "/explainer"})
     } else {
-        MenuLinksObjArray.push({name: "autopay", url:"/autopay"})
-        MenuLinksObjArray.push(...unpaid)
-        MenuLinksObjArray.push({name: "...", url:"/log"})
+        menuLinksObjArray.push({name: "autopay", url:"/autopay"})
+        menuLinksObjArray.push(...unpaid)
+        menuLinksObjArray.push({name: "...", url:"/log"})
     }
 
     return(
-            <MenuLinks objArray = {MenuLinksObjArray}/>
+            <MenuLinks objArray = {menuLinksObjArray}/>
     )
 }
