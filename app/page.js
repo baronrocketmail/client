@@ -1,7 +1,7 @@
 import MenuLinks from "./(components)/MenuLinks";
 import React from "react";
 
-
+//
 async function getName(){
     const info = await fetch("https://client-seven-taupe.vercel.app/api/name")
     return info.json()
