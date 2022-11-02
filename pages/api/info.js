@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import {getFirestore, collection, query, where, getDocs} from "firebase/firestore"
-import {propertyID} from "/Users/sammyfreddie/Desktop/client/constants.mjs"
+import {propertyID} from "public/constants.mjs"
 
 const firebaseConfig = {
     apiKey: "AIzaSyDPGmgTxlAsVkakZrGbs8NTF2r0RcWu_ig",
