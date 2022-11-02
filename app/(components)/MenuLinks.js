@@ -1,12 +1,12 @@
 import Link from "next/link";
 
-export default function NavLinks(props){
-    //  [ {name: "" , href: "" } ]
+export default function menuLinks(props){
+    //  [ {name: "" , url: "" } ]
     let navLinks = []
-    for (let elem in props.objArry){
+    for (let elem in props.objArray){
         navLinks.push(
             <div>
-                <Link key={props.objArry[elem].url} href={props.objArry[elem].url}>{props.objArry[elem].name}</Link>
+                <Link key={props.objArray[elem].url} href={props.objArray[elem].url}>{props.objArray[elem].name}</Link>
                 <br/>
             </div>
         )
