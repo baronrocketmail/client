@@ -14,6 +14,8 @@ html{
     -webkit-tap-highlight-color: transparent;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
+    background-color: rgb(18,18,18);
+    color: white;
 }
 
 a:hover{
@@ -25,7 +27,7 @@ a:hover{
 
 a{
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 80px;
     letter-spacing: -.005em;
     position: static;
